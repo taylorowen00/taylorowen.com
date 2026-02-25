@@ -10,7 +10,7 @@ export default function Home() {
       <section className="hero-section" style={{
         padding: '100px 0 80px',
       }}>
-        <div style={{ maxWidth: '820px', margin: '0 auto', padding: '0 24px' }}>
+        <div className="container">
           <h1 style={{
             fontSize: 'clamp(32px, 4.5vw, 52px)',
             lineHeight: 1.2,
