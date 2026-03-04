@@ -17,7 +17,7 @@ export default function Home() {
             fontWeight: 400,
             marginBottom: '0',
           }}>
-            Academic, author and podcaster exploring how digital technologies are reshaping democratic societies and how they should be governed.
+            Academic, author and podcast host exploring how digital technologies are reshaping democratic societies and how they should be governed.
           </h1>
           <p style={{
             fontSize: '18px',
