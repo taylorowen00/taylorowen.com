@@ -3,6 +3,8 @@
 import { useState } from 'react'
 
 const videos = [
+  { id: 'vd0l1OpQiMo', title: 'When Did Common Sense AI Policy Become Radical? (Alondra Nelson)' },
+  { id: 'VPhfSnJUt6c', title: 'In the Wake of Tumbler Ridge, Can We Trade Privacy for Safety? (Meredith Whittaker)' },
   { id: 'QB7KrTbI-i4', title: 'Canadians Don\u2019t Trust AI. Here\u2019s How to Fix That.' },
   { id: 'nTtL7EdMRsg', title: 'The Future According to Gen Z (Ava Smithing and Sneha Revanur)' },
   { id: 'ARimWI_2AOM', title: 'Bonus: Inside the New Social Media Platform for AI Agents (Derek Ruths)' },
