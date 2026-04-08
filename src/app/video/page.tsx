@@ -3,6 +3,8 @@
 import { useState } from 'react'
 
 const videos = [
+  { id: 'jyFTvYPF1c0', title: 'Michael Pollan Says AI Isn\u2019t Conscious \u2013 But Plants Might Be' },
+  { id: 'cYKedsNmE4s', title: 'Why Did We Stop Talking About The AI Apocalypse? (Nate Soares)' },
   { id: 'vd0l1OpQiMo', title: 'When Did Common Sense AI Policy Become Radical? (Alondra Nelson)' },
   { id: 'VPhfSnJUt6c', title: 'In the Wake of Tumbler Ridge, Can We Trade Privacy for Safety? (Meredith Whittaker)' },
   { id: 'QB7KrTbI-i4', title: 'Canadians Don\u2019t Trust AI. Here\u2019s How to Fix That.' },
