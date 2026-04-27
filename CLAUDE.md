@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Personal academic website for Taylor Owen, built with Next.js 15 (App Router) and statically exported for GitHub Pages hosting. The site showcases writing, podcasts, video, blog posts, and contact information.
+Personal academic website for Taylor Owen, built with Next.js 15 (App Router) and statically exported. Hosted on Cloudflare Workers (static assets), served at https://www.taylorowen.com (apex `taylorowen.com` 301-redirects to `www`). The site showcases writing, podcasts, video, blog posts, and contact information.
 
 ## Tech Stack
 
@@ -47,9 +47,16 @@ public/
 - `npm start` — Start production server
 - `npm run lint` — Run Next.js linting
 
+## Hosting & Deployment
+
+- **Cloudflare Workers (static assets):** Project name `taylorowen`. Build output (`out/`) is uploaded as static assets — no SSR/Worker code.
+- **Auto-deploy:** Push to `main` triggers Cloudflare to run `npm run build`, then deploy via `npx wrangler deploy`. Build settings live in the Cloudflare dashboard; static-asset config lives in `wrangler.jsonc` at the repo root.
+- **DNS:** `taylorowen.com` zone is managed by Cloudflare. Domain is still registered at GoDaddy (nameservers point to Cloudflare).
+- **Apex → www redirect:** Single Redirect rule in Cloudflare: hostname `taylorowen.com` → `https://www.taylorowen.com$path`, 301.
+
 ## Architecture Notes
 
-- **Static Export:** `next.config.ts` sets `output: 'export'` and `images.unoptimized: true` for GitHub Pages compatibility.
+- **Static Export:** `next.config.ts` sets `output: 'export'` and `images.unoptimized: true`. Outputs to `out/`, which Cloudflare serves directly.
 - **Inline Styles + CSS Classes:** Most styling is inline. CSS classes are added to elements that need mobile responsive overrides (since media queries can't override inline styles). These classes use `!important` in `@media (max-width: 768px)` rules in `globals.css`.
 - **Theme:** Gold theme with CSS custom properties (`--color-accent: #b08d57`, `--color-text: #1a1a1a`, etc.) defined in `:root`.
 - **Fonts:** Headings use `Times New Roman` / Georgia serif stack. Body uses system sans-serif.
