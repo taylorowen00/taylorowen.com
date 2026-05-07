@@ -3,6 +3,8 @@
 import { useState } from 'react'
 
 const videos = [
+  { id: 'Xt3wQ6T9Hoo', title: 'Animals are Talking to Each Other. Can AI Help Us Understand Them? (Aza Raskin)' },
+  { id: '8o3vBLdYEAY', title: 'Does 21st Century Politics Still Need Politicians? (H\u00e9l\u00e8ne Landemore & Peter MacLeod)' },
   { id: 'jyFTvYPF1c0', title: 'Michael Pollan Says AI Isn\u2019t Conscious \u2013 But Plants Might Be' },
   { id: 'cYKedsNmE4s', title: 'Why Did We Stop Talking About The AI Apocalypse? (Nate Soares)' },
   { id: 'vd0l1OpQiMo', title: 'When Did Common Sense AI Policy Become Radical? (Alondra Nelson)' },
