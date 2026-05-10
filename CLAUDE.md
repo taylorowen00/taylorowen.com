@@ -91,3 +91,4 @@ Post body content in Markdown...
 ```
 
 The post will automatically appear on the homepage (if among the 5 most recent) and on the blog listing page.
+
