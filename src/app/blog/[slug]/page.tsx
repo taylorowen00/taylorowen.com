@@ -77,6 +77,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         .container-narrow div > hr { border: none; border-top: 1px solid var(--color-border); margin: 40px 0; }
         .youtube-embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 32px 0; border-radius: 8px; }
         .youtube-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px; }
+        .video-embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 32px 0; border-radius: 8px; background: #000; }
+        .video-embed video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px; }
         .container-narrow div > a { color: var(--color-accent); text-decoration: underline; text-underline-offset: 2px; }
         .container-narrow div > a:hover { opacity: 0.8; }
       `}</style>

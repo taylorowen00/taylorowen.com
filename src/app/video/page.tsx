@@ -2,7 +2,12 @@
 
 import { useState } from 'react'
 
-const videos = [
+type Video =
+  | { id: string; title: string }
+  | { src: string; poster: string; title: string }
+
+const videos: Video[] = [
+  { src: '/videos/power-and-politics-interview.mp4', poster: '/images/power-and-politics-interview.jpg', title: 'Canada Now Has an AI Adoption Strategy. It Still Needs a Governance One. (Power & Politics)' },
   { id: 'Xt3wQ6T9Hoo', title: 'Animals are Talking to Each Other. Can AI Help Us Understand Them? (Aza Raskin)' },
   { id: '8o3vBLdYEAY', title: 'Does 21st Century Politics Still Need Politicians? (H\u00e9l\u00e8ne Landemore & Peter MacLeod)' },
   { id: 'jyFTvYPF1c0', title: 'Michael Pollan Says AI Isn\u2019t Conscious \u2013 But Plants Might Be' },
@@ -43,8 +48,49 @@ const videos = [
   { id: 'wTQmuTZmDOc', title: 'Ungoverned Space: How Surveillance Capitalism and AI Undermine Democracy' },
 ]
 
-function VideoCard({ video }: { video: typeof videos[number] }) {
+function VideoCard({ video }: { video: Video }) {
   const [playing, setPlaying] = useState(false)
+
+  if ('src' in video) {
+    return (
+      <div>
+        <div style={{
+          position: 'relative',
+          paddingBottom: '56.25%',
+          height: 0,
+          overflow: 'hidden',
+          borderRadius: '8px',
+          background: '#000',
+        }}>
+          <video
+            controls
+            preload="metadata"
+            poster={video.poster}
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              border: 'none',
+            }}
+          >
+            <source src={video.src} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <h3 style={{
+          fontSize: '14px',
+          fontFamily: 'var(--font-body)',
+          color: 'var(--color-text)',
+          marginTop: '12px',
+          lineHeight: 1.4,
+        }}>
+          {video.title}
+        </h3>
+      </div>
+    )
+  }
 
   if (playing) {
     return (
@@ -155,7 +201,7 @@ export default function VideoPage() {
           gap: '40px 24px',
         }}>
           {videos.map((video) => (
-            <VideoCard key={video.id} video={video} />
+            <VideoCard key={'src' in video ? video.src : video.id} video={video} />
           ))}
         </div>
       </div>
