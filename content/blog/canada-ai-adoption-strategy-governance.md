@@ -4,8 +4,6 @@ date: 2026-06-06
 excerpt: "The federal government's new national AI strategy is precise and costed on the building of AI, but goes general on the questions that have made Canadians wary of it. Adoption and governance are not alternatives — and that assurance is what the strategy postpones."
 ---
 
-I joined Power & Politics to discuss the federal government's new national AI strategy — what it gets right on adoption, and where it falls short on governance.
-
 <div class="video-embed">
   <video controls preload="metadata" poster="/images/power-and-politics-interview.jpg">
     <source src="/videos/power-and-politics-interview.mp4" type="video/mp4" />
