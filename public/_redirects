@@ -1,7 +1,4 @@
 # Legacy URLs from the previous WordPress/Squarespace sites
-/Articles/* /writing 301
-/category/* /blog 301
-
 /3d-peacebuilding-in-afghanistan-2 /blog 301
 /3d-peacebuilding-in-afghanistan-2/ /blog 301
 /a-good-and-a-bad /blog 301
@@ -354,3 +351,7 @@
 /wmd-shrug-we-didnt-mean-nukes/ /blog 301
 /would-we-still-have-freedom-fries /blog 301
 /would-we-still-have-freedom-fries/ /blog 301
+
+# Wildcard rules must stay last: rules below a splat count toward Cloudflare's 100 dynamic-rule limit
+/Articles/* /writing 301
+/category/* /blog 301
